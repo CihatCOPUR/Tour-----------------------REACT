@@ -17,7 +17,7 @@ const [loading, setLoading] = useState(false)
 const fetchTours = async () => {
   setLoading(true)
  const dataTour = await axios(url)
- setTours(dataTour)
+ setTours(dataTour.data)
 setLoading(false)
 }
 

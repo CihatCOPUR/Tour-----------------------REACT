@@ -1,12 +1,12 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 
-const TourData = ({name ,image, id, info ,price}) => {
-
-    console.log(name ,image, id, info ,price)
+const TourData = ({tours}) => {
+console.log(tours)
+  
   return (
     <div>
-        <h1>name</h1>
+        <h1>{tours.name}</h1>
     </div>
   )
 }
