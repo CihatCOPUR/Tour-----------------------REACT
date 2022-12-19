@@ -12,13 +12,14 @@ const url = 'https://course-api.com/react-tours-project'
 function App() {
 
 const [tours, setTours] = useState([])
+const [loading, setLoading] = useState(false)
 
 const fetchTours = async () => {
-  
+  setLoading(true)
  const dataTour = await axios(url)
-console.log(dataTour)
-setTours(dataTour)
-console.log(tours)
+
+ 
+setLoading(false)
 }
 
 
@@ -29,7 +30,7 @@ console.log(tours)
     }, [])
 
   return <h2>
-    <Tour />
+    <Tour tours = {tours} loading = {loading} />
   </h2>
 }
 
