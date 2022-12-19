@@ -6,7 +6,9 @@ console.log(tours)
   
   
   return <h2>
-    {loading ? 'Loading  ....' : < TourData tours = {tours} /> }
+    { tours.map((tour)=>{
+      return < TourData key = {tour.id} {...tours} /> 
+    }) }
   </h2>;
 };
 

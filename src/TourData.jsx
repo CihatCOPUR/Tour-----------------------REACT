@@ -1,16 +1,12 @@
 import React from 'react'
+import { Container } from 'react-bootstrap'
 
-const TourData = ({tours}) => {
-    console.log(tours)
+const TourData = ({name ,image, id, info ,price}) => {
+
+    console.log(name ,image, id, info ,price)
   return (
     <div>
-        {tours.map((tour)=>{
-            return(<>
-                <img src={tour.image} alt="" />
-                <h2>{tour.name}</h2>
-                </>
-            )
-        })}
+        <h1>name</h1>
     </div>
   )
 }
