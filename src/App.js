@@ -35,7 +35,7 @@ setLoading(false)
     }, [])
 
   return <main>
-    <h1 className='tourplaces'> TOUR PLACES</h1>
+    <h1 className='.tourplaces' >TOUR PLACES</h1>
     {loading ? <p className='loading'>Loading ...</p> : tours.length == 0 ?   <button className='refresh-btn'  onClick={()=>fetchTours()}>Refresh</button>:<Tour tours = {tours} remove={remove} loading = {loading} />}
    
     
