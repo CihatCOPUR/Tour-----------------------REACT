@@ -27,10 +27,10 @@ setLoading(false)
     fetchTours()
       
     }, [])
-console.log(tours)
-  return <h2>
+
+  return <main>
     <Tour tours = {tours} loading = {loading} />
-  </h2>
+  </main>
 }
 
 export default App
