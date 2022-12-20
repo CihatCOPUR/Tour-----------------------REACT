@@ -1,10 +1,11 @@
 
+import { useState } from 'react';
 import { Container } from 'react-bootstrap';
 
 
 const Tour = ({ tours}) => {
 
-  
+  const [readMore, setReadMore] = useState(false)
   
   return <div>
     <h1></h1>
@@ -15,7 +16,10 @@ const Tour = ({ tours}) => {
         <h3>{tour.name}</h3>
         <h3>${tour.price}</h3>
         </Container>
-        <h4 className='info'>{tour.info}</h4>
+        <h4 className='info'>{readMore ? tour.info : `${tour.info.substring(0, 200)}...`}
+          <button onClick={() => setReadMore(!readMore)}>
+            {readMore ? 'show less' : '  read more'}
+          </button></h4>
 
 
       </Container>
