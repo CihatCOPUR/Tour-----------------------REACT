@@ -14,6 +14,12 @@ function App() {
 const [tours, setTours] = useState([])
 const [loading, setLoading] = useState(false)
 
+const remove =(id) =>{
+    const newTour = tours.filter((tour)=>tour.id !== id)
+    setTours(newTour)
+}
+
+
 const fetchTours = async () => {
   setLoading(true)
  const dataTour = await axios(url)
@@ -29,7 +35,9 @@ setLoading(false)
     }, [])
 
   return <main>
-    <Tour tours = {tours} loading = {loading} />
+    {loading ? <p className='loading'>Loading ...</p> : tours.length == 0 ? <h1 className='tourplaces'> TOUR PLACES</h1> :<Tour tours = {tours} remove={remove} loading = {loading} />}
+   
+    
   </main>
 }
 
