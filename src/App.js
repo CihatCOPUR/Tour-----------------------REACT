@@ -35,7 +35,8 @@ setLoading(false)
     }, [])
 
   return <main>
-    {loading ? <p className='loading'>Loading ...</p> : tours.length == 0 ? <h1 className='tourplaces'> TOUR PLACES</h1> :<Tour tours = {tours} remove={remove} loading = {loading} />}
+    <h1 className='tourplaces'> TOUR PLACES</h1>
+    {loading ? <p className='loading'>Loading ...</p> : tours.length == 0 ?   <button className='refresh-btn'  onClick={()=>fetchTours()}>Refresh</button>:<Tour tours = {tours} remove={remove} loading = {loading} />}
    
     
   </main>
