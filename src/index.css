@@ -117,6 +117,7 @@ p {
   h3,
   h4 {
     line-height: 1;
+    
   }
 }
 /*  global classes */
@@ -126,6 +127,9 @@ p {
   width: 90vw;
   margin: 0 auto;
   max-width: var(--max-width);
+}
+.info{
+  padding: 10px;
 }
 
 @media screen and (min-width: 992px) {
